@@ -1,0 +1,9 @@
+# Carbon Indexer configuration
+# Filters on-chain events for the Pump.fun program.
+
+endpoint: "${GRPC_ENDPOINT}"
+x_token: "${GRPC_X_TOKEN}"
+metrics_addr: "0.0.0.0:9091"
+
+# Pump.fun program ID on Solana mainnet.
+pumpfun_program_id: "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P"

@@ -1,0 +1,19 @@
+[package]
+name    = "carbon-indexer"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "carbon-indexer"
+path = "src/main.rs"
+
+[dependencies]
+openclaw-config    = { path = "../openclaw-config" }
+openclaw-telemetry = { path = "../openclaw-telemetry" }
+grpc-streamer      = { path = "../grpc-streamer" }
+anyhow             = { workspace = true }
+tokio              = { workspace = true }
+serde              = { workspace = true }
+tracing            = { workspace = true }
+metrics            = { workspace = true }
+dotenvy            = { workspace = true }

@@ -1,0 +1,9 @@
+# gRPC Streamer configuration
+# Secrets are injected via environment variables (${VAR}).
+
+endpoint: "${GRPC_ENDPOINT}"
+x_token: "${GRPC_X_TOKEN}"
+metrics_addr: "0.0.0.0:9090"
+
+# Account owner pubkeys to subscribe to (empty = all transactions).
+account_owners: []
