@@ -1,0 +1,30 @@
+[workspace]
+members = [
+    "crates/openclaw-config",
+    "crates/openclaw-telemetry",
+    "crates/grpc-streamer",
+    "crates/carbon-indexer",
+    "crates/hft-bot",
+]
+resolver = "2"
+
+[workspace.dependencies]
+tokio            = { version = "1", features = ["full"] }
+anyhow           = "1"
+thiserror        = "1"
+serde            = { version = "1", features = ["derive"] }
+serde_yaml       = "0.9"
+tracing          = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter", "json"] }
+tonic            = { version = "0.12", features = ["transport"] }
+prost            = "0.13"
+prometheus       = { version = "0.13", features = ["process"] }
+metrics          = "0.23"
+metrics-exporter-prometheus = "0.15"
+regex            = "1"
+dotenvy          = "0.15"
+
+[profile.release]
+opt-level       = 3
+lto             = true
+codegen-units   = 1

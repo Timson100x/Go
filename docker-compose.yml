@@ -1,0 +1,27 @@
+services:
+  grpc-streamer:
+    build:
+      context: .
+      dockerfile: docker/grpc-streamer/Dockerfile
+    env_file: .env
+    ports:
+      - "9090:9090"
+    restart: unless-stopped
+
+  carbon-indexer:
+    build:
+      context: .
+      dockerfile: docker/carbon-indexer/Dockerfile
+    env_file: .env
+    ports:
+      - "9091:9091"
+    restart: unless-stopped
+
+  hft-bot:
+    build:
+      context: .
+      dockerfile: docker/hft-bot/Dockerfile
+    env_file: .env
+    ports:
+      - "9092:9092"
+    restart: unless-stopped

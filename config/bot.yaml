@@ -1,0 +1,9 @@
+# HFT Bot configuration
+
+metrics_addr: "0.0.0.0:9092"
+
+# Tick interval in milliseconds.
+tick_ms: 100
+
+# Dry-run mode – set to false in production after adding real execution logic.
+dry_run: true
